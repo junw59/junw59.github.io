@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>hexo_learn</title>
+      <link href="/2020/05/16/hexo-learn/"/>
+      <url>/2020/05/16/hexo-learn/</url>
+      
+        <content type="html"><![CDATA[<h2 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h2><ul><li>git</li><li>node.js</li><li>hexo</li></ul><h3 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h3><pre class=" language-bash"><code class="language-bash">node -version <span class="token function">npm</span> -version<span class="token comment" spellcheck="true"># 简写</span>node -v<span class="token function">npm</span> -v</code></pre><p>添加镜像源</p><pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> config <span class="token keyword">set</span> registry https://registry.npm.taobao.org</code></pre><h3 id="hexo基本安装"><a href="#hexo基本安装" class="headerlink" title="hexo基本安装"></a>hexo基本安装</h3><pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g hexo-cli <span class="token comment" spellcheck="true"># 安装</span>hexo -v <span class="token comment" spellcheck="true"># 检验安装</span>hexo init blog <span class="token comment" spellcheck="true"># 初始化</span><span class="token function">cd</span> blog <span class="token comment" spellcheck="true"># 进入文件夹</span><span class="token function">npm</span> <span class="token function">install</span> <span class="token comment" spellcheck="true"># 安装一些东西</span>hexo g <span class="token comment" spellcheck="true"># 生成静态网页</span>hexo server <span class="token comment" spellcheck="true"># 打开本地服务器</span><span class="token comment" spellcheck="true">#ctrl + c 关闭本地服务器</span>hexo s <span class="token comment" spellcheck="true"># 简写</span></code></pre><p><a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p><h3 id="hexo部署到github"><a href="#hexo部署到github" class="headerlink" title="hexo部署到github"></a>hexo部署到github</h3><p>在站点的_config.yml文件中修改</p><p>deploy:<br>  type: git<br>  repository: <a href="https://github.com/username/username.github.io" target="_blank" rel="noopener">https://github.com/username/username.github.io</a><br>  branch: master</p><p>安装deploy-git</p><pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save <span class="token comment" spellcheck="true"># 部署插件</span>hexo clean <span class="token comment" spellcheck="true">#清除</span>hexo generate <span class="token comment" spellcheck="true"># 简写 hexo g</span>hexo deploy <span class="token comment" spellcheck="true"># 简写 hexo d</span></code></pre><p>deploy 需要输入用户名和密码<br>username: <a href="mailto:junw59@outlook.com">junw59@outlook.com</a><br>password: <strong>**</strong></p><h3 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h3><pre class=" language-bash"><code class="language-bash">hexo new post <span class="token string">"title"</span> <span class="token comment" spellcheck="true"># 新建文章</span><span class="token comment" spellcheck="true"># 简写 hexo n "title"</span>hexo g <span class="token comment" spellcheck="true"># 生成静态网页</span>hexo s <span class="token comment" spellcheck="true"># 查看本地内容</span>hexo d <span class="token comment" spellcheck="true"># 上传到github</span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2020/05/16/hello-world/"/>
+      <url>/2020/05/16/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
