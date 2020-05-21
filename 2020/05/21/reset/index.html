@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo-learn, 小吴的博客">
+    <meta name="keywords" content="reset, 小吴的博客">
     <meta name="description" content="计划用以记录所有写下的东西">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hexo-learn | 小吴的博客</title>
+    <title>reset | 小吴的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo-learn</h1>
+                    <h1 class="description center-align post-title">reset</h1>
                 </div>
             </div>
         </div>
@@ -437,12 +437,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%8A%A8%E6%BC%AB/">
+                                <span class="chip bg-color">动漫</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%B6%85%E8%83%BD%E5%8A%9B/">
+                                <span class="chip bg-color">超能力</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%80%9D%E8%80%83/">
+                                <span class="chip bg-color">思考</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%8A%A8%E6%BC%AB/" class="post-category">
+                                动漫
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -451,7 +472,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-16
+                    2020-05-21
                 </div>
                 
 
@@ -467,45 +488,15 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h2><ul>
-<li>git</li>
-<li>node.js</li>
-<li>hexo</li>
-</ul>
-<h3 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h3><pre class="line-numbers language-bash"><code class="language-bash">node -version 
-<span class="token function">npm</span> -version
-<span class="token comment" spellcheck="true"># 简写</span>
-node -v
-<span class="token function">npm</span> -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>添加镜像源</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> config <span class="token keyword">set</span> registry https://registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3 id="hexo基本安装"><a href="#hexo基本安装" class="headerlink" title="hexo基本安装"></a>hexo基本安装</h3><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g hexo-cli <span class="token comment" spellcheck="true"># 安装</span>
-hexo -v <span class="token comment" spellcheck="true"># 检验安装</span>
-hexo init blog <span class="token comment" spellcheck="true"># 初始化</span>
-
-<span class="token function">cd</span> blog <span class="token comment" spellcheck="true"># 进入文件夹</span>
-<span class="token function">npm</span> <span class="token function">install</span> <span class="token comment" spellcheck="true"># 安装一些东西</span>
-
-hexo g <span class="token comment" spellcheck="true"># 生成静态网页</span>
-hexo server <span class="token comment" spellcheck="true"># 打开本地服务器</span>
-<span class="token comment" spellcheck="true">#ctrl + c 关闭本地服务器</span>
-
-hexo s <span class="token comment" spellcheck="true"># 简写</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
-<h3 id="hexo部署到github"><a href="#hexo部署到github" class="headerlink" title="hexo部署到github"></a>hexo部署到github</h3><p>在站点的_config.yml文件中修改</p>
-<p>deploy:<br>  type: git<br>  repository: <a href="https://github.com/username/username.github.io" target="_blank" rel="noopener">https://github.com/username/username.github.io</a><br>  branch: master</p>
-<p>安装deploy-git</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save <span class="token comment" spellcheck="true"># 部署插件</span>
-
-hexo clean <span class="token comment" spellcheck="true">#清除</span>
-hexo generate <span class="token comment" spellcheck="true"># 简写 hexo g</span>
-hexo deploy <span class="token comment" spellcheck="true"># 简写 hexo d</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>deploy 需要输入用户名和密码<br>username: <a href="mailto:junw59@outlook.com">junw59@outlook.com</a><br>password: <strong>**</strong></p>
-<h3 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h3><pre class="line-numbers language-bash"><code class="language-bash">hexo new post <span class="token string">"title"</span> <span class="token comment" spellcheck="true"># 新建文章</span>
-<span class="token comment" spellcheck="true"># 简写 hexo n "title"</span>
-hexo g <span class="token comment" spellcheck="true"># 生成静态网页</span>
-hexo s <span class="token comment" spellcheck="true"># 查看本地内容</span>
-hexo d <span class="token comment" spellcheck="true"># 上传到github</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <p>在20年4月23日这天，我看完了这部番。</p>
+<p>不得不说，这部番是这几年来我最喜欢的番了，上一部给我这种感觉的番还是《科学小飞侠》。</p>
+<p>拥有超能力的少年少女的故事本就是有趣的题材，这部番的超能力却不仅仅是有趣而胡乱写一通的那类，每个超能力都是经过作者仔细的思考过后得出的，片中出现的各种各样的超能力都对剧情的发展起到了推动的作用，似乎没有无意义的角色。</p>
+<p>以超能力为载体，作者大概讲了一个很妙的故事，相麻堇为了阻止为了未来咲良田的超能力被消除，而自杀，浅井惠和春埼美空与他们的小伙伴复活了相麻堇，让咲良田的超能力得以继续保留，获得了完美的故事结局。</p>
+<p>片中各路角色的斗智斗勇绝对足以将这部番推上优秀的等级了，但是不止于此，片中还提出了很多有趣的问题，很多适合去思考的问题，这些哲学上的问题将这部番在我心中的地位向上拔高了一截，不只是有趣，还发人思考，沼泽人、神与恶魔、真善和伪善，这些问题就足够在哲学上让人对这部番充满好奇心了，而我又刚好对这些东西很感兴趣，所以这部番在我心中地位很高。</p>
+<p>主角之间的感情线也是这部番的一大亮点，日式的细腻感情在这部番里同样的出现了，每每这种时候我就会觉得他们对待感情还真是一丝不苟，还真是令人羡慕，类似的番也有很多，不像无聊的宣泄，我也想有这样精确知道自己的感情的能力。</p>
+<p>没有使用者的期望，能力就不会发动。</p>
+<p>咲良田的能力者千奇百怪，但是这些能力往往是蕴含了使用者的某些愿望，是为了实现愿望而诞生的。</p>
+<p>能力有优先级，在我看来，能力的作用范围越小的优先级越高，所以”完美记忆”这个只对自己的大脑作用的能力无法被”重启”这个将全世界都变回存档时刻的能力影响。这仿佛就是不确定原理，两个维度的属性，一个维度很强，另一个维度就必然很弱，两种兼具就通通平庸。</p>
 
             </div>
             <hr/>
@@ -531,7 +522,7 @@ hexo d <span class="token comment" spellcheck="true"># 上传到github</span><sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://junw59.github.io/2020/05/16/hexo-learn/">https://junw59.github.io/2020/05/16/hexo-learn/</a>
+                    <a href="https://junw59.github.io/2020/05/21/reset/">https://junw59.github.io/2020/05/21/reset/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -568,7 +559,19 @@ hexo d <span class="token comment" spellcheck="true"># 上传到github</span><sp
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E5%8A%A8%E6%BC%AB/">
+                                    <span class="chip bg-color">动漫</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%B6%85%E8%83%BD%E5%8A%9B/">
+                                    <span class="chip bg-color">超能力</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%80%9D%E8%80%83/">
+                                    <span class="chip bg-color">思考</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -734,9 +737,68 @@ hexo d <span class="token comment" spellcheck="true"># 上传到github</span><sp
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/05/21/reset/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="reset">
+                        
+                        <span class="card-title">reset</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            智力的角逐，超能力的大战，哲学的思考
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8A%A8%E6%BC%AB/" class="post-category">
+                                    动漫
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8A%A8%E6%BC%AB/">
+                        <span class="chip bg-color">动漫</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%B6%85%E8%83%BD%E5%8A%9B/">
+                        <span class="chip bg-color">超能力</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%80%9D%E8%80%83/">
+                        <span class="chip bg-color">思考</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/05/21/%E7%A9%BA%E4%B9%8B%E5%A2%83%E7%95%8C/">
                     <div class="card-image">
@@ -754,9 +816,9 @@ hexo d <span class="token comment" spellcheck="true"># 上传到github</span><sp
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -780,43 +842,6 @@ hexo d <span class="token comment" spellcheck="true"># 上传到github</span><sp
                         <span class="chip bg-color">????</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/05/16/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-16
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Jun Wu
-                            
-                        </span>
-                    </div>
                 </div>
                 
             </div>
